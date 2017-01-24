@@ -56,6 +56,7 @@ SinglyLinkedList.prototype.append = function(val) {
 
 SinglyLinkedList.prototype.enqueue = function(val) {
   let node = new Node(val); // line added, was above outside this function in our whiteboarded code
+  this.append(val);
   node.next = null;
   this.tail = node;
   return node.val;
@@ -69,3 +70,7 @@ SinglyLinkedList.prototype.dequeue = function() {
   }
   return null;
 };
+
+var sll = new SinglyLinkedList(['r', 'e', 's', 'p', 'e', 'c', 't']);
+
+console.log(sll);
