@@ -64,9 +64,10 @@ SinglyLinkedList.prototype.enqueue = function(val) {
 
 SinglyLinkedList.prototype.dequeue = function() {
   if (this.head) {
+    let prev = this.head;
     let cur = this.head.next; // added "let", not in whiteboard code
     this.head = cur;
-    return cur;
+    return prev.val;
   }
   return null;
 };
