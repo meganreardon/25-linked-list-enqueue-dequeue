@@ -55,8 +55,8 @@ SinglyLinkedList.prototype.append = function(val) {
 // ----- MEGAN AND PETER WHITEBOARD CODE FROM LAB 25 ----- //
 
 SinglyLinkedList.prototype.enqueue = function(val) {
-  let node = new Node(val); // line added, was above outside this function in our whiteboarded code
-  this.append(val); // changed a bit from what we whiteboarded
+  let node = new Node(val);
+  this.append(val);
   node.next = null;
   this.tail = node;
   return node.val;
@@ -65,7 +65,7 @@ SinglyLinkedList.prototype.enqueue = function(val) {
 SinglyLinkedList.prototype.dequeue = function() {
   if (this.head) {
     let prev = this.head;
-    let cur = this.head.next; // added "let", not in whiteboard code
+    let cur = this.head.next;
     this.head = cur;
     return prev.val;
   }
